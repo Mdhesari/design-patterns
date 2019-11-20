@@ -1,0 +1,21 @@
+{
+    "name": "md/design.patterns",
+    "description": "design patterns practices",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamad Fazel",
+            "email": "mdhesari99@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "./app/config/common.php"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}
