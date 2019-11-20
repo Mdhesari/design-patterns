@@ -21,4 +21,9 @@ class SmsObserver implements ServiceInterface
 
         return $this->priority;
     }
+
+    public function setPriority(int $priority){
+
+        $this->priority = $priority;
+    }
 }

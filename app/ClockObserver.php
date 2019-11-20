@@ -2,12 +2,12 @@
 
 namespace App;
 
-class MailObserver implements ServiceInterface
+class ClockObserver implements ServiceInterface
 {
 
-    protected $name = "Mail";
+    protected $name = "Clock";
 
-    protected $priority = 0;
+    protected $priority = 50;
 
     public function update(ObservableInterface $observable)
     {
@@ -26,4 +26,5 @@ class MailObserver implements ServiceInterface
 
         $this->priority = $priority;
     }
+
 }

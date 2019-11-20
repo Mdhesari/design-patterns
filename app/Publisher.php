@@ -9,6 +9,12 @@ class Publisher implements ObservableInterface
 
     protected $event;
 
+    public function __construct(NotifyHandler $notifyHandler)
+    {
+
+        $this->notifyHandler = $notifyHandler;
+    }
+
     public function register(ServiceInterface $observer)
     {
 
@@ -17,25 +23,6 @@ class Publisher implements ObservableInterface
 
         $this->observers[$key] = $observer;
 
-        // managing priorities
-        /* for ($i = 0; $i < count($this->observers); $i++) {
-
-            dd($this->observers[$i]);
-
-            if (isset($this->observers[$i + 1])) {
-
-                $priority_1 = $this->observers[$i]->getPriority();
-                $priority_2 = $this->observers[$i + 1]->getPriority();
-                if ($priority_2 > $priority_1) {
-
-                    $temp = $this->observers[$i];
-                    $this->observers[$i] = $this->observers[$i + 1];
-                    $this->observers[$i + 1] = $temp;
-                    $i = 0;
-                    continue;
-                }
-            }
-        } */
     }
 
     public function unregister(ServiceInterface $observer)
@@ -46,13 +33,15 @@ class Publisher implements ObservableInterface
         unset($this->observers[$key]);
     }
 
-    public function notify()
+    public function getObservers()
     {
 
-        foreach ($this->observers as $observer) {
+        return $this->observers;
+    }
 
-            $observer->update($this);
-        }
+    public function notify()
+    {
+        $this->notifyHandler->handle($this);
     }
 
     public function getEvent()
