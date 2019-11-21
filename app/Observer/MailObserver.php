@@ -1,18 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Observer;
 
-class SmsObserver implements ServiceInterface
+class MailObserver implements ServiceInterface
 {
 
-    protected $name = "SMS";
+    protected $name = "Mail";
 
-    protected $priority = 10;
+    protected $priority = 0;
 
     public function update(ObservableInterface $observable)
     {
 
-        print_r("{$this->name} was called by {$observable->getEvent()} event.");
+        print_r("{$this->name} notified : {$observable->getEvent()}");
         echo PHP_EOL;
     }
 

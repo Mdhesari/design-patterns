@@ -5,11 +5,11 @@
  */
 require_once __DIR__ . '/app/config/bootstrap.php';
 
-use App\Publisher;
-use App\MailObserver;
-use App\SmsObserver;
-use App\ClockObserver;
-use App\NotifyHandler;
+use App\Observer\Publisher;
+use App\Observer\MailObserver;
+use App\Observer\SmsObserver;
+use App\Observer\ClockObserver;
+use App\Observer\NotifyHandler;
 
 $publisher = new Publisher(new NotifyHandler);
 

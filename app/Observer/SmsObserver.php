@@ -1,18 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Observer;
 
-class ClockObserver implements ServiceInterface
+class SmsObserver implements ServiceInterface
 {
 
-    protected $name = "Clock";
+    protected $name = "SMS";
 
-    protected $priority = 50;
+    protected $priority = 10;
 
     public function update(ObservableInterface $observable)
     {
 
-        print_r("{$this->name} notified : {$observable->getEvent()}");
+        print_r("{$this->name} was called by {$observable->getEvent()} event.");
         echo PHP_EOL;
     }
 
@@ -26,5 +26,4 @@ class ClockObserver implements ServiceInterface
 
         $this->priority = $priority;
     }
-
 }
