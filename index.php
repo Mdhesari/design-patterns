@@ -5,14 +5,8 @@
  */
 require_once __DIR__ . '/app/config/bootstrap.php';
 
-use App\Decorator\Car\Factory\Features\AutoDrive;
-use App\Decorator\Car\Factory\Features\Sunroof;
-use App\Decorator\Car\Factory\Tiba;
+use App\Decorator\Html\Dom\Input;
 
-$tiba1 = new Tiba;
+$input = new Input("name");
 
-$tiba1 = new Sunroof($tiba1);
-
-$tiba1 = new AutoDrive($tiba1);
-
-echo $tiba1->description() . ' | Price : ' . $tiba1->price();
+echo $input->toHtml();

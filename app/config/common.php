@@ -7,3 +7,9 @@ function dd($content)
 
     die;
 }
+
+function checkNullAndReturn($var, $correct, $incorrect = "")
+{
+
+    return is_null($var) ? $incorrect : $correct;
+}
