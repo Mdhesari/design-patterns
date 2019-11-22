@@ -13,4 +13,10 @@ class Ship implements TransportInterface, SeaInterface
 
         return $place;
     }
+
+    public function canSupportBadWeather(): bool
+    {
+        
+        return true;
+    }
 }
