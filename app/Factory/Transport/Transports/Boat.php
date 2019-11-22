@@ -3,9 +3,9 @@
 namespace App\Factory\Transport\Transports;
 
 use App\Factory\Transport\Illuminate\TransportInterface;
-use App\Factory\Transport\Illuminate\Transports\RoadInterface;
+use App\Factory\Transport\Illuminate\Transports\SeaInterface;
 
-class Trunk implements TransportInterface, RoadInterface
+class Boat implements TransportInterface, SeaInterface
 {
 
     public function deliver($place)
@@ -14,9 +14,9 @@ class Trunk implements TransportInterface, RoadInterface
         return $place;
     }
 
-    public function badRoadSecure(): bool
+    public function canSupportBadWeather(): bool
     {
 
-        return true;
+        return false;
     }
 }
