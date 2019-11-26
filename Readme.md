@@ -25,3 +25,12 @@ What facade design pattern is? it makes the software developemen for entire deve
 This states that we need to hide the complex logic of our application behind our main classes so there won't be anything missunserstood or complicated for other developers.
 
 For example laravel one of the greatest frameworks of php use this design pattern.
+
+### Proxy 
+
+There are times that we do not want to call our class directly so we use a middleware as a proxy and it will handle the logic for us.
+
+    "It is more about performance and using our data wisely."
+
+For example some classes use lots of system data unreasonably so the performance of the software will decrease and there will be some other potential risks in the future.
+
