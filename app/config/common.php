@@ -13,3 +13,8 @@ function checkNullAndReturn($var, $correct, $incorrect = "")
 
     return is_null($var) ? $incorrect : $correct;
 }
+
+function myprint($text) {
+
+    echo $text . "\n";
+}

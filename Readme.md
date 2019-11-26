@@ -22,7 +22,7 @@ The solution is having a contract and create same adaptor for each of them imple
 
 What facade design pattern is? it makes the software developemen for entire developers so much easier.
 
-This states that we need to hide the complex logic of our application behind our main classes so there won't be anything missunserstood or complicated for other developers.
+This states that we need to hide the complex logic of our application behind our main classes so there won't be anything missunderstood or complicated for other developers.
 
 For example laravel one of the greatest frameworks of php use this design pattern.
 
@@ -34,3 +34,4 @@ There are times that we do not want to call our class directly so we use a middl
 
 For example some classes use lots of system data unreasonably so the performance of the software will decrease and there will be some other potential risks in the future.
 
+### Bridge
