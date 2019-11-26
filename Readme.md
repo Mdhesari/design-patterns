@@ -18,3 +18,10 @@ Their api work differently and it makes it so much difficult in order to use the
 
 The solution is having a contract and create same adaptor for each of them implementing our contract so the methods and properties are the same and in order to use them on application there will be no problems.
 
+### Facade 
+
+What facade design pattern is? it makes the software developemen for entire developers so much easier.
+
+This states that we need to hide the complex logic of our application behind our main classes so there won't be anything missunserstood or complicated for other developers.
+
+For example laravel one of the greatest frameworks of php use this design pattern.
