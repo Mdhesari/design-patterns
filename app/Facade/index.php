@@ -1,9 +1,6 @@
 <?php
 
-use App\Facade\Facades\Auth;
-use App\Facade\Facades\Mail;
-use App\FAcade\Facades\User;
-use App\Facade\Facades\Validation;
+use App\Facade\Auth;
 
 $user = [
     'email' => 'mdhesari99@gmail.com',
@@ -11,11 +8,7 @@ $user = [
     'language' => 'persian',
 ];
 
-$auth = new Auth(
-    new Validation,
-    new User,
-    new Mail,
-);
+$auth = new Auth;
 
 if ($auth->signUp($user)) {
 
