@@ -58,3 +58,11 @@ new Cirlce(new Blue)
 ---
 
 so now we created a bridge in our application between Color class and Shape class, where shape class injects color class and use them.
+
+### Template Method (structural)
+
+This is like strategy pattern except in its granularity, and states that whenever there are reusable methods and properties in your classes you should use abstract class as a base class.
+
+    "Template Method uses inheritance to vary part of an algorithm. Strategy uses delegation to vary the entire algorithm."
+
+    "we define a structure for out similar classes so as to let them extend the class and override their own methodology."
