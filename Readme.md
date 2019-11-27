@@ -18,7 +18,7 @@ Their api work differently and it makes it so much difficult in order to use the
 
 The solution is having a contract and create same adaptor for each of them implementing our contract so the methods and properties are the same and in order to use them on application there will be no problems.
 
-### Facade 
+### Facade
 
 What facade design pattern is? it makes the software developemen for entire developers so much easier.
 
@@ -26,7 +26,7 @@ This states that we need to hide the complex logic of our application behind our
 
 For example laravel one of the greatest frameworks of php use this design pattern.
 
-### Proxy 
+### Proxy
 
 There are times that we do not want to call our class directly so we use a middleware as a proxy and it will handle the logic for us.
 
@@ -35,3 +35,26 @@ There are times that we do not want to call our class directly so we use a middl
 For example some classes use lots of system data unreasonably so the performance of the software will decrease and there will be some other potential risks in the future.
 
 ### Bridge
+
+Bridge is a structural design pattern and it helps us seperate two complex and big classes of our application independently, so they will be used together by injecting into the main class.
+
+    "the bridge pattern is useful when both the class and what it does vary often."
+
+For example we have some kinds of shapes with different colors, if we define like this :
+
+Shape => Circle BlueCirlce RedCircle GreenCircle
+Square BlueSquare RedSquare GreenSquare
+
+---
+
+Instead we will use this :
+
+Colors => Blue Red Green ...
+
+Shapes => Square Circle Rectangle ...
+
+new Cirlce(new Blue)
+
+---
+
+so now we created a bridge in our application between Color class and Shape class, where shape class injects color class and use them.
