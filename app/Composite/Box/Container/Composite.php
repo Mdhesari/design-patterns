@@ -7,7 +7,7 @@ use App\Composite\Box\Contracts\Component;
 class Composite extends Component
 {
 
-    protected $children;
+    protected $children = [];
 
     public function add(Component ...$components)
     {
@@ -26,7 +26,7 @@ class Composite extends Component
 
         $this->children = array_filter($this->children, function ($child) use ($component) {
 
-            return $child == $component;
+            return $child != $component;
         });
 
         $component->unsetParent();
