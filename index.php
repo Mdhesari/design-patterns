@@ -7,6 +7,12 @@
 
     require_once __DIR__ . '/app/config/bootstrap.php';
 
+    use App\Composite\Html\Elements\Element;
+    use App\Composite\Html\Elements\FieldSet;
+    use App\Composite\Html\Elements\Form;
+    use App\Composite\Html\Elements\Input;
+    use App\Composite\Html\Elements\Label;
+    use App\Composite\Html\Factory\InputFactory;
     use App\Composite\Office\Employment;
 
     /*    use App\Composite\Box\Branch\Charger;
@@ -32,7 +38,7 @@
 
     echo $box->execute(); */
 
-    $recruiter = new Employment;
+    /*     $recruiter = new Employment;
 
     $mojtaba = $recruiter->newEmploy(['name' => 'Mojhtaba']);
     $ghasem = $recruiter->newEmploy(['name' => 'Ghasem']);
@@ -49,3 +55,27 @@
     $mohamad->employ($sina);
 
     echo $coworker->execute();
+ */
+
+    $form = new Form;
+
+    $fieldset = new FieldSet;
+
+    // the main container
+    $fieldset
+        ->setTitle("Welcome")
+        ->add($form);
+
+    $div = (new Element)->add($fieldset);
+
+    $form->url("index");
+
+    $name = InputFactory::labeled("fullname", "Name : ", "Your name...");
+
+    $email = InputFactory::emailLabeled("email", "Email : ", "your email...");
+
+    $submit = InputFactory::submit("Ok");
+
+    $form->add($name, $email, $submit);
+
+    echo $div->render();
