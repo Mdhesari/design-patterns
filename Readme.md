@@ -66,3 +66,11 @@ This is like strategy pattern except in its granularity, and states that wheneve
     "Template Method uses inheritance to vary part of an algorithm. Strategy uses delegation to vary the entire algorithm."
 
     "we define a structure for out similar classes so as to let them extend the class and override their own methodology."
+
+### Composite (structural)
+
+The intent of composite is to compose objects into tree structures to represent part-whole hirarchies.
+
+    "A directory could have files and subdirectories for example"
+
+And a composite should have add() and remove() methods in order to be extended.
