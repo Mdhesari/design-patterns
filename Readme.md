@@ -74,3 +74,7 @@ The intent of composite is to compose objects into tree structures to represent 
     "A directory could have files and subdirectories for example"
 
 And a composite should have add() and remove() methods in order to be extended.
+
+### Iterator (behavioral)
+
+The Iterator design pattern provides a way to access the elements of an aggregate object without exposing its underlying representation.
