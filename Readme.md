@@ -75,6 +75,12 @@ The intent of composite is to compose objects into tree structures to represent 
 
 And a composite should have add() and remove() methods in order to be extended.
 
-### Iterator (behavioral)
+### Iterator (behavioural)
 
 The Iterator design pattern provides a way to access the elements of an aggregate object without exposing its underlying representation.
+
+### State (behavioural)
+
+A monotholic class with different functionalities could have one or more states at the run time.
+
+In order to avoid using too much if and else statements, State design pattern helps us to structure our states in seperate classes so when the state changs the class will change its behavious too.
