@@ -22,7 +22,6 @@ class Manager extends Person
     {
 
 
-
         return "Manager [{$this->name} {$this->family}]";
     }
 }
