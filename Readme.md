@@ -91,4 +91,8 @@ This is designed to simplify the use of dependencies and get rid of unrequired i
 
 We use an interface and also a null object for all related classes that has similar functionalites and when there is no available class we return null object in order to be able call methods even if it's null.
 
-    
+### Builder (Creational)
+
+This design pattern provides a solution for various object creation and it helps make the class optimized.
+
+the intention is to seperate the constructor of a complex object from its representation.
