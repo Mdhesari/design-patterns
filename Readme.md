@@ -84,3 +84,11 @@ The Iterator design pattern provides a way to access the elements of an aggregat
 A monotholic class with different functionalities could have one or more states at the run time.
 
 In order to avoid using too much if and else statements, State design pattern helps us to structure our states in seperate classes so when the state changs the class will change its behavious too.
+
+### Null Object (behavioural)
+
+This is designed to simplify the use of dependencies and get rid of unrequired if and else statements.
+
+We use an interface and also a null object for all related classes that has similar functionalites and when there is no available class we return null object in order to be able call methods even if it's null.
+
+    
