@@ -91,8 +91,18 @@ This is designed to simplify the use of dependencies and get rid of unrequired i
 
 We use an interface and also a null object for all related classes that has similar functionalites and when there is no available class we return null object in order to be able call methods even if it's null.
 
-### Builder (Creational)
+### Builder (creational)
 
 This design pattern provides a solution for various object creation and it helps make the class optimized.
 
 the intention is to seperate the constructor of a complex object from its representation.
+
+### Prototype (creational)
+
+The intention of this design pattern to give a solution for copying objects.
+
+A we all know when assigning an object to a variable it will store the object with its resources which means whenever there is a change on that new variable (for example setting new value for a property) it will be the same on the main object
+
+So the solution is to use __clone() magic method 
+
+$object2 = clone $object1;
