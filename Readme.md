@@ -1,5 +1,27 @@
 ## Design Patterns Practice
 
+Design patterns are mainly solutions for better implementing software entities and solve problems wisely
+
+    "It is a description or template for how to solve a problem that can be used in many different situations."
+
+We have 3 types of design patterns :
+
+1. Creational
+
+    These design patterns are all about class instantiation. This pattern can be further divided into class-creation patterns and object-creational patterns.
+
+2. Structural
+
+    These design patterns are all about classes and object composition.
+
+    Structural design patterns define ways to compose objects to obtain new functionalities.
+
+3. Behavioral
+
+    These design patterns are all about communication between objects.
+
+    
+
 ### Command
 
 Sometimes in our application we need some changes by obeying solid principles so what will be the solution?
@@ -75,17 +97,17 @@ The intent of composite is to compose objects into tree structures to represent 
 
 And a composite should have add() and remove() methods in order to be extended.
 
-### Iterator (behavioural)
+### Iterator (behavioral)
 
 The Iterator design pattern provides a way to access the elements of an aggregate object without exposing its underlying representation.
 
-### State (behavioural)
+### State (behavioral)
 
 A monotholic class with different functionalities could have one or more states at the run time.
 
 In order to avoid using too much if and else statements, State design pattern helps us to structure our states in seperate classes so when the state changs the class will change its behavious too.
 
-### Null Object (behavioural)
+### Null Object (behavioral)
 
 This is designed to simplify the use of dependencies and get rid of unrequired if and else statements.
 
@@ -101,8 +123,16 @@ the intention is to seperate the constructor of a complex object from its repres
 
 The intention of this design pattern to give a solution for copying objects.
 
-A we all know when assigning an object to a variable it will store the object with its resources which means whenever there is a change on that new variable (for example setting new value for a property) it will be the same on the main object
+As we all know when assigning an object to a variable it will store the object with its resources which means whenever there is a change on that new variable (for example setting new value for a property) it will be the same on the main object
 
 So the solution is to use __clone() magic method 
 
 $object2 = clone $object1;
+
+
+### Chain Of Responsibility (behavioral)
+
+This design pattern provides a solution to implement middlewares for our application where there are different classes implementing same interface for different targets, and when the client requests we put them on cycle of handlers and each of them do different things until one of them show a result.
+
+the draw back of this is there may be some problmes where user will get nothing at the end of handlers.
+
