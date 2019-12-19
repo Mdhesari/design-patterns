@@ -22,13 +22,13 @@ We have 3 types of design patterns :
 
     
 
-### Command
+### Command (behavioral)
 
 Sometimes in our application we need some changes by obeying solid principles so what will be the solution?
 
 What we'll do is that instead of using properties of thoses commands and tasks we create seperate clasees and inject them all into our invoker class which finally we will have array of InterfaceClass type commands.
 
-### Adaptor
+### Adaptor (structural)
 
 In our application there are times that things are different and work differently so in order to use them in our application we need a right adaptor to convert the functinalities into our used functionality.
 
@@ -40,7 +40,7 @@ Their api work differently and it makes it so much difficult in order to use the
 
 The solution is having a contract and create same adaptor for each of them implementing our contract so the methods and properties are the same and in order to use them on application there will be no problems.
 
-### Facade
+### Facade (structural)
 
 What facade design pattern is? it makes the software developemen for entire developers so much easier.
 
@@ -48,7 +48,7 @@ This states that we need to hide the complex logic of our application behind our
 
 For example laravel one of the greatest frameworks of php use this design pattern.
 
-### Proxy
+### Proxy (structural)
 
 There are times that we do not want to call our class directly so we use a middleware as a proxy and it will handle the logic for us.
 
@@ -56,7 +56,7 @@ There are times that we do not want to call our class directly so we use a middl
 
 For example some classes use lots of system data unreasonably so the performance of the software will decrease and there will be some other potential risks in the future.
 
-### Bridge
+### Bridge (structural)
 
 Bridge is a structural design pattern and it helps us seperate two complex and big classes of our application independently, so they will be used together by injecting into the main class.
 
