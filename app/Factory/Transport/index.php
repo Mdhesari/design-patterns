@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Factory Design pattern is creational
+ * 
+ * As we all know that using new keyword could be harmful and impact negatively on our application so we should avoid using it too much, that's why abstract factory and factory design patterns come.
+ * 
+ * It's so beneficial and makes developers to debug and test their code easily.
+ */
+
 use App\Factory\Transport\Logistics\RoadLogistic;
 use App\Factory\Transport\Logistics\SeaLogistic;
 use App\Factory\Transport\Logistics\SkyLogistic;

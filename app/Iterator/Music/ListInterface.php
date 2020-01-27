@@ -2,6 +2,8 @@
 
 namespace App\Iterator\Music;
 
+use Iterator;
+
 interface ListInterace
 {
 
