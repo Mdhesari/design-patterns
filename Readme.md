@@ -8,19 +8,17 @@ We have 3 types of design patterns :
 
 1. Creational
 
-    These design patterns are all about class instantiation. This pattern can be further divided into class-creation patterns and object-creational patterns.
+   These design patterns are all about class instantiation. This pattern can be further divided into class-creation patterns and object-creational patterns.
 
 2. Structural
 
-    These design patterns are all about classes and object composition.
+   These design patterns are all about classes and object composition.
 
-    Structural design patterns define ways to compose objects to obtain new functionalities.
+   Structural design patterns define ways to compose objects to obtain new functionalities.
 
 3. Behavioral
 
-    These design patterns are all about communication between objects.
-
-    
+   These design patterns are all about communication between objects.
 
 ### Command (behavioral)
 
@@ -125,10 +123,9 @@ The intention of this design pattern to give a solution for copying objects.
 
 As we all know when assigning an object to a variable it will store the object with its resources which means whenever there is a change on that new variable (for example setting new value for a property) it will be the same on the main object
 
-So the solution is to use __clone() magic method 
+So the solution is to use \_\_clone() magic method
 
 $object2 = clone $object1;
-
 
 ### Chain Of Responsibility (behavioral)
 
@@ -136,3 +133,8 @@ This design pattern provides a solution to implement middlewares for our applica
 
 the draw back of this is there may be some problmes where user will get nothing at the end of handlers.
 
+### Flyweight (structural)
+
+this design pattern aims to decrease object creation and speed up application performance by having less less objects for situations where we need to instantiate same objects for times...
+
+    "flyweight is used when we need to create large number of similar objects"
